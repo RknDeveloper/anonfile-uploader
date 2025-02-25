@@ -1,7 +1,7 @@
 # Anonfile Uploader 
 
 ```bash
-pip install catbox-uploader
+pip install anonfile-uploader
 ```
 
 
