@@ -18,7 +18,8 @@ print(f"Uploaded File: {link['url']}")
 ## Error Handling
 The library comes with built-in exception handling to manage common errors such as timeouts, connection issues, or Json errors, others errors.
 ```python
-from anonfile import Anonfile, TimeoutError, ConnectionError, JsonDecodeError, AnonfileError
+from anonfile import Anonfile
+from anonfile.exceptions import TimeoutError, ConnectionError, JsonDecodeError, AnonfileError
 
 uploader = Anonfile(email="your_email@example.com", password="your_password")
 try:
@@ -38,7 +39,8 @@ except AnonfileError as e:
 ## Handling Timeout
 If the upload takes too long and exceeds the specified timeout, a TimeoutError will be raised.
 ```python
-from anonfile import Anonfile, TimeoutError
+from anonfile import Anonfile
+from anonfile.exceptions import TimeoutError
 
 uploader = Anonfile(email="your_email@example.com", password="your_password")
 try:
@@ -51,7 +53,8 @@ except TimeoutError:
 ## Handling Connection Issues
 If there's a problem connecting to the anonfile.la , a ConnectionError will be raised.
 ```python
-from anonfile import Anonfile, ConnectionError
+from anonfile import Anonfile
+from anonfile.exceptions import ConnectionError
 
 uploader = Anonfile(email="your_email@example.com", password="your_password")
 try:
