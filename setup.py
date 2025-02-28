@@ -1,9 +1,12 @@
 from setuptools import setup, find_packages
+import re
 
-
+with open("src/anonfile/__init__.py", encoding="utf-8") as f:
+    version = re.findall(r"__version__ = \"(.+)\"", f.read())[0]
+    
 setup(
     name='anonfile_uploader',
-    version='0.1.2',
+    version=version,
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     install_requires=['requests'],
